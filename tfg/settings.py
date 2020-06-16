@@ -88,7 +88,9 @@ DATABASES = {
 
 import dj_database_url
 from decouple import config
-
+import django_heroku
+'''
+'''
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
@@ -139,4 +141,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILE_DIRS = (
     os.path.join(BASE_DIR,'static')
 )
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
